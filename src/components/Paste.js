@@ -23,6 +23,19 @@ class Paste extends Component {
         }
     }
 
+    generateRawUrl(alias) {
+        let url = new URL(document.location);
+        let host = url.hostname;
+        if (host.startsWith('www')) {
+            host = host.replace('www', 'raw');
+        } else {
+            host = `raw.${host}`;
+        }
+        url.path = alias;
+        url.hostname = host;
+        return url.toString();
+    }
+
     render() {
         const {paste} = this.props;
         return (
@@ -36,7 +49,7 @@ class Paste extends Component {
                         <PrismCode language={paste.language.prismClassName} source={paste.source}/>
                     </div>}
                     <h3 className="text-center header-text">
-                        <a className="raw-link" href={`/raw/${paste.alias}`}>
+                        <a className="raw-link" href={this.generateRawUrl(paste.alias)}>
                             <i className="fas fa-link fa-sm" aria-hidden="true"/>
                         </a>
                         Raw code
