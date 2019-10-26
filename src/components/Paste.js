@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Api} from "../api";
 import {Container, FormControl, FormGroup} from "react-bootstrap";
-import PrismCode from "./PasteCore";
+import PrismCode from "./PrismCode";
 import {PASTE_LOADED} from "../actions";
 
 const mapStateToProps = ({paste}, {alias}) => ({
