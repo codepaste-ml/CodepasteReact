@@ -9,6 +9,10 @@ import '@fortawesome/fontawesome-free/js/all.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.css'
 
+import Prism from 'prismjs'
+
+Prism.highlightAll();
+
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
