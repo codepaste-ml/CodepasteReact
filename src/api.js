@@ -1,5 +1,5 @@
 export class Api {
-    static host = '/api';
+    static host = (process.env.NODE_ENV === 'production' ? 'https://api.codepaste.ml' : '');
 
     static post(path, body) {
         return fetch(`${Api.host}${path}`, {
@@ -16,7 +16,7 @@ export class Api {
     }
 
     static getLanguages() {
-        return Api.get('/lang');
+        return Api.get('/languages');
     }
 
     static getPaste(alias) {
