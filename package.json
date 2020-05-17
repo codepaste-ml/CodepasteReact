@@ -2,7 +2,7 @@
   "name": "codepaste-react",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://api.codepaste.ml",
+  "proxy": "http://localhost:8080",
   "homepage": "https://react.codepaste.ml",
   "dependencies": {
     "bootstrap": "^4.3.1",
