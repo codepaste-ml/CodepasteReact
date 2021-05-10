@@ -1,5 +1,5 @@
 export class Api {
-    static host = (process.env.NODE_ENV === 'production' ? 'https://api.codepaste.ml' : '');
+    static host = (process.env.NODE_ENV === 'production' ? 'https://api-paste.darkkeks.me' : '');
 
     static post(path, body) {
         return fetch(`${Api.host}${path}`, {
