@@ -6,7 +6,7 @@
   "homepage": "https://react.codepaste.ml",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.25.0",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.9.0",
